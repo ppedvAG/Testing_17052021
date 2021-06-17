@@ -7,7 +7,7 @@ namespace Calculator.Tests
     [TestClass]
     public class CalcTest
     {
-
+        
         [TestMethod]
         public void Sum_3_and_4_results_7()
         {
