@@ -1,5 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.QualityTools.Testing.Fakes;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.IO;
 
 namespace TDDBank.Tests
 {
@@ -21,6 +23,36 @@ namespace TDDBank.Tests
             var oh = new OpeningHours();
 
             Assert.AreEqual(result, oh.IsOpen(dt));
+        }
+
+        [TestMethod]
+        public void can_call_IsNowOpen()
+        {
+            var oh = new OpeningHours();
+
+            oh.IsNowOpen();
+        }
+
+        [TestMethod]
+        public void IsNowOpen_mit_Fakes()
+        {
+            var oh = new OpeningHours();
+
+
+            using (ShimsContext.Create())
+            {
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 6, 14, 10, 29, 0);
+                Assert.IsFalse(oh.IsNowOpen());
+
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 6, 14, 10, 30, 0);
+                Assert.IsTrue(oh.IsNowOpen());
+
+                System.IO.Fakes.ShimStreamReader.AllInstances.ReadLine = x => "Hallo";
+                using (var sr = new StreamReader("C:\\temp\\lala.txt"))
+                    Assert.AreEqual("Hallo", sr.ReadLine());
+
+                //Assert.IsTrue(File.Exists("x:\\kerjhn.txt"));
+            }
         }
     }
 }

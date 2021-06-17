@@ -6,6 +6,12 @@ namespace TDDBank
     public class OpeningHours
     {
 
+        public bool IsNowOpen()
+        {
+            return IsOpen(DateTime.Now);
+        }
+
+
         private Dictionary<DayOfWeek, Times> days = new Dictionary<DayOfWeek, Times>();
 
         public OpeningHours()
