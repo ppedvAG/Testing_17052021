@@ -47,6 +47,25 @@ namespace Calculator.Tests
             Assert.AreEqual(0, result);
         }
 
+
+        [TestMethod]
+        [DataRow(1, 4, 5)]
+        [DataRow(7, 4, 11)]
+        [DataRow(-1, 4, 3)]
+        [DataRow(1, -4, -3)]
+        [DataRow(0, 0, 0)]
+        public void Sum_Tests(int a, int b, int expected)
+        {
+            //Arrange
+            Calc calc = new Calc();
+
+            //Act
+            int result = calc.Sum(a, b);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+
         [TestMethod]
         public void Sum_MAX_and_1__throws_OverflowException()
         {
