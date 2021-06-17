@@ -42,7 +42,7 @@ namespace TDDBank.Tests
 
             ba.Deposit(10m);
 
-            ba.Withdraw(10m);
+            ba.Withdraw(3m);
             Assert.AreEqual(7m, ba.Balance);
 
             ba.Withdraw(5m);
