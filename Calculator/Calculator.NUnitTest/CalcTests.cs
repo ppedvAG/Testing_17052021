@@ -18,6 +18,7 @@ namespace Calculator.NUnitTest
         }
 
         [Test]
+        [Category("Data Driven")]
         [TestCase(1, 4, 5)]
         [TestCase(7, 4, 11)]
         [TestCase(-1, 4, 3)]

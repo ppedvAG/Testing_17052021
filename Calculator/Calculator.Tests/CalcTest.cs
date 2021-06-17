@@ -7,7 +7,7 @@ namespace Calculator.Tests
     [TestClass]
     public class CalcTest
     {
-        
+
         [TestMethod]
         public void Sum_3_and_4_results_7()
         {
@@ -49,6 +49,7 @@ namespace Calculator.Tests
 
 
         [TestMethod]
+        [TestCategory("Data Driven")]
         [DataRow(1, 4, 5)]
         [DataRow(7, 4, 11)]
         [DataRow(-1, 4, 3)]
@@ -73,6 +74,21 @@ namespace Calculator.Tests
 
             Assert.ThrowsException<OverflowException>(() => calc.Sum(int.MaxValue, 1));
 
+        }
+
+
+        [TestMethod]
+        public void Calc_IstEsHeiﬂ()
+        {
+            var calc = new Calc();
+
+            Assert.IsTrue(calc.IstEsHeiﬂ(20));
+            Assert.IsTrue(calc.IstEsHeiﬂ(21));
+            Assert.IsTrue(calc.IstEsHeiﬂ(int.MaxValue));
+
+            Assert.IsFalse(calc.IstEsHeiﬂ(19));
+            Assert.IsFalse(calc.IstEsHeiﬂ(0));
+            Assert.IsFalse(calc.IstEsHeiﬂ(int.MinValue));
         }
     }
 }

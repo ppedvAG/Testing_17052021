@@ -14,12 +14,13 @@ namespace Calulator.XUnitTests
 
             //Act
             int result = calc.Sum(-3, -4);
-
+            
             //Assert
             Assert.Equal(-7, result);
         }
 
         [Theory]
+        [Trait("Data Driven","yo")]
         [InlineData(1, 4, 5)]
         [InlineData(7, 4, 11)]
         [InlineData(-1, 4, 3)]
@@ -37,6 +38,6 @@ namespace Calulator.XUnitTests
             Assert.Equal(expected, result);
         }
 
-
+        
     }
 }
