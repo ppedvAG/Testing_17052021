@@ -17,5 +17,33 @@ namespace Calculator.NUnitTest
             Assert.That(result, Is.EqualTo(15));
         }
 
+        [Test]
+        [TestCase(1, 4, 5)]
+        [TestCase(7, 4, 11)]
+        [TestCase(-1, 4, 3)]
+        [TestCase(1, -4, -3)]
+        [TestCase(0, 0, 0)]
+        public void Sum_Tests(int a, int b, int expected)
+        {
+            //Arrange
+            Calc calc = new Calc();
+
+            //Act
+            int result = calc.Sum(a, b);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+
+
+        [Test]
+        public void Sum_MAX_and_1__throws_OverflowException()
+        {
+            Calc calc = new Calc();
+
+            Assert.Throws<OverflowException>(() => calc.Sum(int.MinValue, -1));
+
+        }
+
     }
 }
