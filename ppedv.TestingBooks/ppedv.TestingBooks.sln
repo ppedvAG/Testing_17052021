@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31410.414
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.TestingBooks.Model", "ppedv.TestingBooks.Model\ppedv.TestingBooks.Model.csproj", "{91E6B97A-C6E4-40F6-8033-C524F60146CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.TestingBooks.Data.EFCore", "ppedv.TestingBooks.Data.EFCore\ppedv.TestingBooks.Data.EFCore.csproj", "{0F3843B8-A1D6-403F-8815-90F9436E3DD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.TestingBooks.Data.EFCore.Tests", "ppedv.TestingBooks.Data.EFCore.Tests\ppedv.TestingBooks.Data.EFCore.Tests.csproj", "{66841141-E516-48E4-9E06-347EF2F5B625}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{91E6B97A-C6E4-40F6-8033-C524F60146CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91E6B97A-C6E4-40F6-8033-C524F60146CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91E6B97A-C6E4-40F6-8033-C524F60146CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3843B8-A1D6-403F-8815-90F9436E3DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3843B8-A1D6-403F-8815-90F9436E3DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3843B8-A1D6-403F-8815-90F9436E3DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3843B8-A1D6-403F-8815-90F9436E3DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66841141-E516-48E4-9E06-347EF2F5B625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66841141-E516-48E4-9E06-347EF2F5B625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66841141-E516-48E4-9E06-347EF2F5B625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66841141-E516-48E4-9E06-347EF2F5B625}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
