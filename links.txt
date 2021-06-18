@@ -1,0 +1,16 @@
+https://github.com/ppedvAG/Testing_17052021
+
+https://referencesource.microsoft.com
+https://dotnet.microsoft.com/platform/support/policy
+https://github.com/dotnet/winforms
+https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-4/
+https://www.electronjs.org
+http://avaloniaui.net
+https://platform.uno/how-it-works/
+https://webassembly.org
+https://devblogs.microsoft.com/dotnet/
+https://github.com/tonerdo/pose
+https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/
+https://github.com/public-apis/public-apis
+https://app.quicktype.io
+https://fluentassertions.com
