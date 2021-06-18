@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.TestingBooks.Data.EFCore\ppedv.TestingBooks.Data.EFCore.csproj" />
+    <ProjectReference Include="..\ppedv.TestingBooks.Model\ppedv.TestingBooks.Model.csproj" />
+  </ItemGroup>
+
+</Project>
