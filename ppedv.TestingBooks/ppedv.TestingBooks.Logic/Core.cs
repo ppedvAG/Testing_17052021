@@ -17,7 +17,9 @@ namespace ppedv.TestingBooks.Logic
         public Author GetAuthorWithTheMostBooks()
         {
             return Repository.GetAll<Author>()
+                             .Where(x => x.Books.Count() > 0)
                              .OrderByDescending(x => x.Books.Count())
+                             .ThenBy(x => x.Created)
                              .FirstOrDefault();
         }
     }
